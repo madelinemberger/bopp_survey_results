@@ -1,0 +1,37 @@
+---
+title: "Geocoding BOPP Use Survey Responses"
+author: "Maddie Berger"
+date: "9/21/2020"
+output: html_document
+---
+
+# Overview
+
+This script is the first attempt at Geocoding survey output from Maptionnaire, since it no longer exports shapefiles. The objective is to eventually build a streamlined processes for cleaning and processing this kind of output data into a layer (read: feature class) that can be published on SeaSketch. 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(janitor)
+library(here)
+```
+
+# Respondents
+
+This is the first tab in the output, meaning it contains data for the first page of the survey. It includes any identifying information of the respondent (name, etc) and which answers they chose for the radio button "Which sector are you in" question.
+
+Note on radio button output: 
+
+Not sure why the initial column "what parish do you live in?" has three output columns
+After a column indicating if they answered the question, there is a column for each possible response. The answer they choose first will contain "TRUE", while the rest will be "FALSE". I'm not entirely sure why it comes up twice? 
+
+What we would want to get from this sheet is demographic data on how far the survey is reached, so need to clean it up so that we can create survey demographics. 
+
+```{r}
+
+
+
+
+```
+
