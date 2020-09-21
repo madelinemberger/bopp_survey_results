@@ -21,17 +21,21 @@ library(here)
 
 This is the first tab in the output, meaning it contains data for the first page of the survey. It includes any identifying information of the respondent (name, etc) and which answers they chose for the radio button "Which sector are you in" question.
 
-Note on radio button output: 
-
+*Notes on radio button output:* 
 Not sure why the initial column "what parish do you live in?" has three output columns
-After a column indicating if they answered the question, there is a column for each possible response. The answer they choose first will contain "TRUE", while the rest will be "FALSE". I'm not entirely sure why it comes up twice? 
+After a column indicating if they answered the question, there is a column for each possible response. Right now, they are all FALSE which is somewhat perplexing? 
 
 What we would want to get from this sheet is demographic data on how far the survey is reached, so need to clean it up so that we can create survey demographics. 
 
 ```{r}
 
+respondents <- read_csv(here("_raw_data", "respondents.csv")) %>% 
+  janitor::clean_names()
 
+#what columns do we actually need to get all the info we want? 
 
-
+respondents_clean <- respondents %>%
+  select()
+  
 ```
 
