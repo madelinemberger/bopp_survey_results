@@ -13,8 +13,11 @@ This script is the first attempt at Geocoding survey output from Maptionnaire, s
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
+library(sf)
 library(janitor)
 library(here)
+library(rgeos)
+library(mapview)
 ```
 
 # Respondents
@@ -47,4 +50,35 @@ respondents_clean <- respondents[-c(12:21)]# get rid of the all the columns that
   
 ```
 
-#
+# Creating shapefiles
+
+Look at once of the activity specific ones to get shapefiles. Aquaculture as an example. 
+```{r}
+
+aquaculture_areas <- read_csv(here("_raw_data", "aquaculture_area.csv")) %>% 
+  clean_names()
+
+aquaculture_shp <- aquaculture_areas %>%
+  filter(!is.na(wkt)) %>% #filter out na or st_as_sf will not run
+  st_as_sf(wkt = "wkt", crs = 4326) #wgs84
+  
+mapview(aquaculture_shp)
+```
+
+Find the relative weights for value based on respondent id
+
+```{r}
+
+aquaculture_total <- aquaculture_shp %>% 
+  group_by(respondent_id) %>% 
+  mutate(
+    values = as.numeric(please_indicate_the_relative_value_of_this_area_to_you)
+  ) %>% 
+  summarize(
+    total_pts = sum(values)
+  )
+
+
+
+```
+

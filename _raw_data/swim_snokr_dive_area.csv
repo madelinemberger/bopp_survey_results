@@ -1,0 +1,37 @@
+Respondent ID,Publication ID,Submitted,First Active,Publication Consent,Language,Index,wkt,"Where do you swim, snorkel or dive?",Which activities do you do here?,Swimming,Snorkeling,Diving,Which activities do you do here?,Swimming,Snorkeling,Diving
+,,,,,,,,swim_snork_dive_area,swimming_snorkeling_diving,swimming_snorkeling_diving: option swimming,swimming_snorkeling_diving: option snorkeling,swimming_snorkeling_diving: option diving,checkbox-list-kevw8wvw,checkbox-list-kevw8wvw: option option-identifier-kevw8xu1,checkbox-list-kevw8wvw: option option-identifier-kevw97x6,checkbox-list-kevw8wvw: option option-identifier-kevw9b71
+2bge6eee3ue4,322abf9mzz3w,2020-09-09 22:22:54,2020-09-09 22:17:42,FALSE,en,0,POINT (-64.729279 32.349591),"32.349591,-64.729279","[true,true,true]",FALSE,FALSE,FALSE,"[true,true,true]",TRUE,TRUE,TRUE
+2bge6eee3ue4,322abf9mzz3w,2020-09-09 22:22:54,2020-09-09 22:17:42,FALSE,en,1,POINT (-64.675061 32.388783),"32.388783,-64.675061","[true,true,true]",FALSE,FALSE,FALSE,"[true,true,true]",TRUE,TRUE,TRUE
+62k9mng39ghr,322abf9mzz3w,2020-09-09 22:20:29,2020-09-09 22:19:41,TRUE,en,0,POINT (-64.724309 32.34244),"32.34244,-64.724309","[true,true,true]",FALSE,FALSE,FALSE,"[true,true,true]",TRUE,TRUE,TRUE
+4bgz3ov63adj,8br9m2rfp6ip,2020-09-11 19:01:41,2020-09-11 18:48:15,TRUE,en,0,POINT (-64.668109 32.336514),"32.336514,-64.668109","[true,false,false]",TRUE,FALSE,FALSE,"[true,false,false]",FALSE,FALSE,FALSE
+4bgz3ov63adj,8br9m2rfp6ip,2020-09-11 19:01:41,2020-09-11 18:48:15,TRUE,en,1,POINT (-64.894061 32.30936),"32.30936,-64.894061","[false,true,false]",FALSE,TRUE,FALSE,"[false,true,false]",FALSE,FALSE,FALSE
+4bgz3ov63adj,8br9m2rfp6ip,2020-09-11 19:01:41,2020-09-11 18:48:15,TRUE,en,2,POINT (-64.750096 32.448237),"32.448237,-64.750096","[false,false,true]",FALSE,FALSE,TRUE,"[false,false,true]",FALSE,FALSE,FALSE
+9bg2epo3w3wu,62lif6vug8v9,2020-09-14 21:49:30,2020-09-14 21:34:18,TRUE,en,0,POINT (-64.678803 32.31869),"32.31869,-64.678803","[false,false,true]",FALSE,FALSE,TRUE,"[false,false,true]",FALSE,FALSE,FALSE
+9bg2epo3w3wu,62lif6vug8v9,2020-09-14 21:49:30,2020-09-14 21:34:18,TRUE,en,1,POINT (-64.858999 32.259782),"32.259782,-64.858999","[true,false,false]",TRUE,FALSE,FALSE,"[true,false,false]",FALSE,FALSE,FALSE
+9jm82urj6u6f,2byc8yyk8des,2020-09-17 05:01:00,2020-09-17 04:59:45,TRUE,en,0,POINT (-64.822754 32.43859),"32.43859,-64.822754","[false,true,false]",FALSE,TRUE,FALSE,"[false,true,false]",FALSE,FALSE,FALSE
+82rdv79igp8d,2byc8yyk8des,,2020-09-17 10:24:00,TRUE,en,0,POINT (-64.775144 32.316519),"32.316519,-64.775144","[true,true,false]",TRUE,TRUE,FALSE,"[true,true,false]",FALSE,FALSE,FALSE
+3jfs7fvu7zdx,2byc8yyk8des,2020-09-17 15:51:15,2020-09-17 15:47:43,TRUE,en,0,POINT (-64.6812 32.388643),"32.388643,-64.6812","[true,false,false]",TRUE,FALSE,FALSE,"[true,false,false]",FALSE,FALSE,FALSE
+3jfs7fvu7zdx,2byc8yyk8des,2020-09-17 15:51:15,2020-09-17 15:47:43,TRUE,en,1,POINT (-64.692504 32.384024),"32.384024,-64.692504","[false,true,false]",FALSE,TRUE,FALSE,"[false,true,false]",FALSE,FALSE,FALSE
+3jfs7fvu7zdx,2byc8yyk8des,2020-09-17 15:51:15,2020-09-17 15:47:43,TRUE,en,2,POINT (-64.701255 32.381253),"32.381253,-64.701255","[true,true,true]",TRUE,TRUE,TRUE,"[true,true,true]",FALSE,FALSE,FALSE
+3jp2ta38eec6,429e4efu6uew,,2020-09-17 19:48:43,TRUE,en,0,POINT (-64.831082 32.246959),"32.246959,-64.831082","[false,false,true]",FALSE,FALSE,TRUE,"[false,false,true]",FALSE,FALSE,FALSE
+3jp2ta38eec6,429e4efu6uew,,2020-09-17 19:48:43,TRUE,en,1,POINT (-64.776837 32.260315),"32.260315,-64.776837","[false,false,true]",FALSE,FALSE,TRUE,"[false,false,true]",FALSE,FALSE,FALSE
+3jp2ta38eec6,429e4efu6uew,,2020-09-17 19:48:43,TRUE,en,2,POINT (-64.779584 32.46737),"32.46737,-64.779584","[false,false,true]",FALSE,FALSE,TRUE,"[false,false,true]",FALSE,FALSE,FALSE
+3jp2ta38eec6,429e4efu6uew,,2020-09-17 19:48:43,TRUE,en,3,POINT (-64.638822 32.354912),"32.354912,-64.638822","[false,false,true]",FALSE,FALSE,TRUE,"[false,false,true]",FALSE,FALSE,FALSE
+3jp2ta38eec6,429e4efu6uew,,2020-09-17 19:48:43,TRUE,en,4,POINT (-64.738385 32.295147),"32.295147,-64.738385","[false,false,true]",FALSE,FALSE,TRUE,"[false,false,true]",FALSE,FALSE,FALSE
+3jp2ta38eec6,429e4efu6uew,,2020-09-17 19:48:43,TRUE,en,5,POINT (-64.934079 32.335188),"32.335188,-64.934079","[false,false,true]",FALSE,FALSE,TRUE,"[false,false,true]",FALSE,FALSE,FALSE
+3jp2ta38eec6,429e4efu6uew,,2020-09-17 19:48:43,TRUE,en,6,POINT (-64.79675 32.25567),"32.25567,-64.79675","[false,false,true]",FALSE,FALSE,TRUE,"[false,false,true]",FALSE,FALSE,FALSE
+3jp2ta38eec6,429e4efu6uew,,2020-09-17 19:48:43,TRUE,en,7,POINT (-64.639508 32.360132),"32.360132,-64.639508","[false,false,true]",FALSE,FALSE,TRUE,"[false,false,true]",FALSE,FALSE,FALSE
+3jp2ta38eec6,429e4efu6uew,,2020-09-17 19:48:43,TRUE,en,8,POINT (-64.730832 32.476059),"32.476059,-64.730832","[false,false,true]",FALSE,FALSE,TRUE,"[false,false,true]",FALSE,FALSE,FALSE
+3jp2ta38eec6,429e4efu6uew,,2020-09-17 19:48:43,TRUE,en,9,POINT (-64.912107 32.34447),"32.34447,-64.912107","[false,false,true]",FALSE,FALSE,TRUE,"[false,false,true]",FALSE,FALSE,FALSE
+9s47wn37kca7,429e4efu6uew,2020-09-18 01:24:22,2020-09-18 01:18:49,TRUE,en,0,POINT (-64.748291 32.331689),"32.331689,-64.748291","[true,false,false]",TRUE,FALSE,FALSE,"[true,false,false]",FALSE,FALSE,FALSE
+9s47wn37kca7,429e4efu6uew,2020-09-18 01:24:22,2020-09-18 01:18:49,TRUE,en,1,POINT (-64.656909 32.352636),"32.352636,-64.656909","[true,false,false]",TRUE,FALSE,FALSE,"[true,false,false]",FALSE,FALSE,FALSE
+9s47wn37kca7,429e4efu6uew,2020-09-18 01:24:22,2020-09-18 01:18:49,TRUE,en,2,POINT (-64.708621 32.31852),"32.31852,-64.708621",,FALSE,FALSE,FALSE,,FALSE,FALSE,FALSE
+9s47wn37kca7,429e4efu6uew,2020-09-18 01:24:22,2020-09-18 01:18:49,TRUE,en,3,POINT (-64.717122 32.316125),"32.316125,-64.717122","[false,true,false]",FALSE,TRUE,FALSE,"[false,true,false]",FALSE,FALSE,FALSE
+9s47wn37kca7,429e4efu6uew,2020-09-18 01:24:22,2020-09-18 01:18:49,TRUE,en,4,POINT (-64.808504 32.308342),"32.308342,-64.808504","[true,false,false]",TRUE,FALSE,FALSE,"[true,false,false]",FALSE,FALSE,FALSE
+3224cs3st668,429e4efu6uew,2020-09-18 18:57:15,2020-09-18 18:53:43,TRUE,en,0,POINT (-64.781987 32.34505),"32.34505,-64.781987","[true,false,false]",TRUE,FALSE,FALSE,"[true,false,false]",FALSE,FALSE,FALSE
+3224cs3st668,429e4efu6uew,2020-09-18 18:57:15,2020-09-18 18:53:43,TRUE,en,1,POINT (-64.805333 32.331127),"32.331127,-64.805333","[false,true,false]",FALSE,TRUE,FALSE,"[false,true,false]",FALSE,FALSE,FALSE
+3224cs3st668,429e4efu6uew,2020-09-18 18:57:15,2020-09-18 18:53:43,TRUE,en,2,POINT (-64.714696 32.386228),"32.386228,-64.714696","[false,false,true]",FALSE,FALSE,TRUE,"[false,false,true]",FALSE,FALSE,FALSE
+2s7te49963nx,429e4efu6uew,,2020-09-18 18:57:17,TRUE,en,0,POINT (-64.97465 32.345123),"32.345123,-64.97465","[false,false,true]",FALSE,FALSE,TRUE,"[false,false,true]",FALSE,FALSE,FALSE
+6jht4kpc477u,429e4efu6uew,,2020-09-18 22:17:18,TRUE,en,0,POINT (-64.727056 32.279184),"32.279184,-64.727056","[true,false,false]",TRUE,FALSE,FALSE,"[true,false,false]",FALSE,FALSE,FALSE
+6jht4kpc477u,429e4efu6uew,,2020-09-18 22:17:18,TRUE,en,1,POINT (-64.777181 32.242023),"32.242023,-64.777181","[false,false,true]",FALSE,FALSE,TRUE,"[false,false,true]",FALSE,FALSE,FALSE
+4bdz4tji69xj,429e4efu6uew,2020-09-19 14:10:12,2020-09-19 14:07:15,TRUE,en,0,POINT (-64.821089 32.251112),"32.251112,-64.821089","[true,false,false]",TRUE,FALSE,FALSE,"[true,false,false]",FALSE,FALSE,FALSE
