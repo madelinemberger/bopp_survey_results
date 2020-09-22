@@ -18,6 +18,7 @@ library(janitor)
 library(here)
 library(rgeos)
 library(mapview)
+library(foreach)
 ```
 
 # Respondents
@@ -76,9 +77,89 @@ aquaculture_total <- aquaculture_shp %>%
   ) %>% 
   summarize(
     total_pts = sum(values)
+  ) 
+
+
+aquaculture_final <- aquaculture_shp %>% 
+  mutate(
+    vals = as.numeric(please_indicate_the_relative_value_of_this_area_to_you),
+    rel_vals = vals / aquaculture_total$total_pts,
+    #use = "aquaculture" #how can we automate this ? use only if its important to join it all together
+  ) %>% 
+  dplyr::select(-starts_with("what")) %>% 
+  mutate(
+    value = please_indicate_the_relative_value_of_this_area_to_you)
   )
 
+mapview(aquaculture_final, zcol = "rel_vals")
 
+```
+
+# Automate process above - Simple Data
+
+Create loop out of process above, which ideally will: 
+
+- convert to shapefile (focus on this part first)
+- find the total points
+- find the relative value for each respondent
+- join into one file with all the shapefiles
+
+
+```{r}
+
+bopp_files <- list.files(here('_raw_shps'), full.names=T)
+
+#for every i in this folder
+
+foreach(f = bopp_files) %dopar% { 
+  
+  #f = bopp_files[1]
+  
+  shps <- read_csv(f) %>%
+    clean_names() %>% 
+    filter(!is.na(wkt)) %>% #filter out na or st_as_sf will not run
+    st_as_sf(wkt = "wkt", crs = 4326)%>% 
+    mutate(
+    value = please_indicate_the_relative_value_of_this_area_to_you
+  ) %>% 
+  dplyr::select(-starts_with("what"), -starts_with("please"))
+  
+  write_sf(shps, dsn = paste0('shps/', substr(basename(f),1,6), '.shp'), overwrite=T)
+  
+}
+
+bopp_files[3]
+
+```
+
+Check to make sure these all look ok on the map: 
+
+```{r}
+
+boating <- read_sf(file.path("shps/boatin.shp"))
+
+aquacul <- read_sf(file.path("shps/aquacu.shp"))
+
+swim_snork_div <- read_sf(file.path("shps/swim_s.shp"))
+
+
+mapview(boat)
+```
+
+
+# Using `responses` sheet instead
+
+Can we do it using just one sheet? Then, we can just download that one and run the script
+
+Maybe!
+
+```{r}
+all_responses <- read_csv(here("_raw_data","all_responses.csv")) %>% 
+  clean_names()
+
+#experiment with pivot_wider
+resp_clean<- all_responses %>% 
+  pivot_wider(id_cols = respondent_id, names_from = element_label, values_from = original_content) # I think the previous method will actually be easier
 
 ```
 
