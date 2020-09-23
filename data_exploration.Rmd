@@ -88,7 +88,7 @@ aquaculture_final <- aquaculture_shp %>%
   ) %>% 
   dplyr::select(-starts_with("what")) %>% 
   mutate(
-    value = please_indicate_the_relative_value_of_this_area_to_you)
+    value = please_indicate_the_relative_value_of_this_area_to_you
   )
 
 mapview(aquaculture_final, zcol = "rel_vals")
@@ -113,7 +113,7 @@ bopp_files <- list.files(here('_raw_shps'), full.names=T)
 
 foreach(f = bopp_files) %dopar% { 
   
-  #f = bopp_files[1]
+  #f = bopp_files[6]
   
   shps <- read_csv(f) %>%
     clean_names() %>% 
@@ -128,9 +128,12 @@ foreach(f = bopp_files) %dopar% {
   
 }
 
-bopp_files[3]
-
+bopp_files[8]
 ```
+
+This loop works for any that have the uniform wording - otherwise need to create the shapefiles by hand.
+
+Fix Swimming, Snorkeling and Diving plus Wastewater / Pollution: 
 
 Check to make sure these all look ok on the map: 
 
@@ -146,6 +149,7 @@ swim_snork_div <- read_sf(file.path("shps/swim_s.shp"))
 mapview(boat)
 ```
 
+Issue: because some had different questions, it did not retain the value (which I feel like we'll definitely need for the heat map...)
 
 # Using `responses` sheet instead
 
@@ -157,9 +161,32 @@ Maybe!
 all_responses <- read_csv(here("_raw_data","all_responses.csv")) %>% 
   clean_names()
 
-#experiment with pivot_wider
-resp_clean<- all_responses %>% 
-  pivot_wider(id_cols = respondent_id, names_from = element_label, values_from = original_content) # I think the previous method will actually be easier
+all_respondents <- unique(all_responses$respondent_id)
+
+
+## explore trying to filter by sector
+resp_by_sector <- all_responses %>% 
+  filter(str_detect(element_label, pattern = "What sector"))
+
+sector_specific <- unique(resp_by_sector$respondent_id)
+
+#so two missing - two people did not say what sector they were from. This makes it difficult to create the popup 
+
+## explore trying to filter by wkt variable 
+
+resp_by_data <- all_responses %>% 
+  filter(!is.na(well_known_text) | element_type == "slider") %>% 
+  dplyr::select(respondent_id,
+                element_type,
+                element_label,
+                original_content,
+                well_known_text) %>% 
+  mutate(
+   data = case_when(
+      well_known_text %in% NA ~ original_content, # get all the data into one column
+      TRUE ~ well_known_text
+    )
+  )
 
 ```
 
