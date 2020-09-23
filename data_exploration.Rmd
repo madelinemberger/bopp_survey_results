@@ -133,7 +133,14 @@ bopp_files[8]
 
 This loop works for any that have the uniform wording - otherwise need to create the shapefiles by hand.
 
-Fix Swimming, Snorkeling and Diving plus Wastewater / Pollution: 
+Swimming, Snorkeling and Diving: 
+```{r}
+
+swim <- read_st
+
+
+```
+
 
 Check to make sure these all look ok on the map: 
 
@@ -141,15 +148,27 @@ Check to make sure these all look ok on the map:
 
 boating <- read_sf(file.path("shps/boatin.shp"))
 
-aquacul <- read_sf(file.path("shps/aquacu.shp"))
+aquaculture <- read_sf(file.path("shps/aquacu.shp"))
 
-swim_snork_div <- read_sf(file.path("shps/swim_s.shp"))
+comm_fish <- read_sf(file.path("shps/comm_f.shp"))
 
+rec_fish <- read_sf(file.path("shps/rec_fi.shp"))
 
-mapview(boat)
+tourism <- read_sf(file.path("shps/touris.shp"))
+
+utilities <- read_sf(file.path("shps/utilit.shp"))
+
+recreation_conserv <- read_sf(file.path("shps/recrea.shp"))
+
+mapview(aquaculture, zcol = "value")+
+  mapview(boating, col.region = "lightblue")+
+  mapview(rec_fish, col.region = "pink")+
+  mapview(tourism)+
+  mapview(utilities, col.region = "green")
 ```
 
-Issue: because some had different questions, it did not retain the value (which I feel like we'll definitely need for the heat map...)
+
+***
 
 # Using `responses` sheet instead
 
