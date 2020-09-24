@@ -133,10 +133,38 @@ bopp_files[8]
 
 This loop works for any that have the uniform wording - otherwise need to create the shapefiles by hand.
 
-Swimming, Snorkeling and Diving: 
+## Swimming, Snorkeling and Diving: 
 ```{r}
 
-swim <- read_st
+swim <- read_csv(here("_raw_data","swim_snork_areas.csv")) %>%
+  clean_names()
+
+swim_poly <- swim %>% 
+  filter(str_detect(wkt,pattern = "POLYGON")) %>% 
+  st_as_sf(wkt = "wkt", crs = 4326)
+
+swim$which_activities_do_you_do_here %in% swim$which_activities_do_you_do_here_1 # they all match, so we can go ahead and remove the duplicated columns 
+
+swim_shp <- swim %>% 
+  dplyr::select(-contains("_1")) %>%
+  filter(!str_detect(wkt,pattern = "POLYGON")) %>%
+  filter(!is.na(wkt)) %>% 
+  st_as_sf(wkt = "wkt", crs = 4326)%>%
+  mutate(
+    value = please_indicate_the_relative_value_of_this_area_to_you,
+    activities = which_activities_do_you_do_here
+  ) %>% 
+  dplyr::select(-starts_with("where"),-starts_with("please"),-starts_with("which"))
+
+write_sf(swim_shp, dsn = "shps/swim_snork.shp")
+```
+
+## Wastewater
+(no data right now so its breaking the loop)
+```{r}
+
+wastewater <- read_csv(here("_raw_data","wastewater_areas.csv"))
+
 
 
 ```
